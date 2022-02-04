@@ -1,0 +1,15 @@
+using System.Collections.Generic;
+
+namespace LibraryConsoleApp.models
+{
+    public class Member:ModelBase
+    {
+        
+        public string Name { get; set; }
+        public string Gender { get; set; }
+        public string Phone { get; set; }
+        public string Occupation { get; set; }
+        
+        public virtual ICollection<BookLog> BookLog { get; set; }
+    }
+}
