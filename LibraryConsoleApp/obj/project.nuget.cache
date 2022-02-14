@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "sTQ0tZMD3CjeZNRDIvxqv+rZwTCy71UqQSQd/6XVHThigH2DEsN6up3nGI4LQ61/NaRTSZIUla14EHWjmZRLSA==",
+  "dgSpecHash": "In2RzF4moaK1R/LOZXIFcBE3V/TkbDRwCpGILSefj5/Wc31o6w2zQHhoYyzAoCwskc2AmY/oSfZyYS8xDcrs8w==",
   "success": true,
   "projectFilePath": "C:\\Users\\bimasakti\\RiderProjects\\LibraryConsoleApp\\LibraryConsoleApp\\LibraryConsoleApp.csproj",
   "expectedPackageFiles": [
@@ -49,6 +49,7 @@
     "C:\\Users\\bimasakti\\.nuget\\packages\\mysql.entityframeworkcore\\5.0.10\\mysql.entityframeworkcore.5.0.10.nupkg.sha512",
     "C:\\Users\\bimasakti\\.nuget\\packages\\netstandard.library\\2.0.1\\netstandard.library.2.0.1.nupkg.sha512",
     "C:\\Users\\bimasakti\\.nuget\\packages\\newtonsoft.json\\10.0.1\\newtonsoft.json.10.0.1.nupkg.sha512",
+    "C:\\Users\\bimasakti\\.nuget\\packages\\quartz\\3.1.0\\quartz.3.1.0.nupkg.sha512",
     "C:\\Users\\bimasakti\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Users\\bimasakti\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\bimasakti\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",

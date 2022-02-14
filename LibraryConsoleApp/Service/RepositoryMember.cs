@@ -1,21 +1,22 @@
 using System.Collections.Generic;
 using System.Linq;
+using K4os.Compression.LZ4.Internal;
 using LibraryConsoleApp.DbContext;
+using LibraryConsoleApp.models;
 
 namespace LibraryConsoleApp.Service
 {
-    public class RepositoryService<TEntity> : IRepositoryService<TEntity> where TEntity : class
+    public class RepositoryMember
     {
-        /**
+          /**
             <summary> SelectAll is action for select and display all row in entity. </summary>
             <return> list of an entity </return>
         */
-        public List<TEntity> SelectAll()
+        public List<Member> SelectAll()
         {
             using (var context = new AppDbContext())
             {
-                // IEnumerable<Employee> employees = new IEnumerable<Employee>();
-                return context.Set<TEntity>().ToList();
+                return context.Set<Member>().ToList();
             }
         }
         
@@ -24,57 +25,55 @@ namespace LibraryConsoleApp.Service
             <param  name = "id" > id will be search and will be presented per row </param>
             <return> tuple or row of entity. </return>
         */
-        public TEntity SelectById(int id) 
+        public Member SelectById(int id) 
         {
             using (var context = new AppDbContext())
             {
                 // IQueryable<TEntity> entityQuery = context.Set<TEntity>();
 
-                return context.Set<TEntity>().Find(id);
+                return context.Set<Member>().Find(id);
 
             }
         }
         
         /**
             <summary> Add is action for create or insert a row. </summary>
-            <param  name = "entity" > is an entity that will be add.</param>
+            <param  name = "member" > is an entity that will be add.</param>
         */
-        public void Add(TEntity entity)
+        public void Add(Member member)
         {
             using (var context = new AppDbContext())
             {
-                context.Set<TEntity>().Add(entity);
+                context.Set<Member>().Add(member);
                 context.SaveChanges();
             }
         }
         
         /**
             <summary> Change is action for update a row that already exist. </summary>
-            <param  name = "entity" > is an entity that will be update.</param>
+            <param  name = "member" > is an entity that will be update.</param>
         */
-        public void Change(TEntity entity)
+        public void Change(Member member)
         {
             using (var context = new AppDbContext())
             {
-                context.Set<TEntity>().Update(entity);
+                context.Set<Member>().Update(member);
                 context.SaveChanges();
             }
         }
         /**
             <summary> Delete is action for delete a row. </summary>
-            <param  name = "entity" > is an entity that will be delete.</param>
+            <param  name = "id" > is an id that will be delete.</param>
         */
 
         public void Delete(int id)
         {
             using (var context = new AppDbContext())
             {
-                var employeeId = context.Set<TEntity>().Find(id);
-                context.Set<TEntity>().Remove(employeeId);
+                var memberId = context.Set<Member>().Find(id);
+                context.Set<Member>().Remove(memberId);
                 context.SaveChanges();
             }
         }
-
     }
-
-    }
+}

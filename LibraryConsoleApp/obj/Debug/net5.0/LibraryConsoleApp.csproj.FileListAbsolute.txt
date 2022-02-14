@@ -75,3 +75,4 @@ C:\Users\bimasakti\RiderProjects\LibraryConsoleApp\LibraryConsoleApp\obj\Debug\n
 C:\Users\bimasakti\RiderProjects\LibraryConsoleApp\LibraryConsoleApp\obj\Debug\net5.0\ref\LibraryConsoleApp.dll
 C:\Users\bimasakti\RiderProjects\LibraryConsoleApp\LibraryConsoleApp\obj\Debug\net5.0\LibraryConsoleApp.pdb
 C:\Users\bimasakti\RiderProjects\LibraryConsoleApp\LibraryConsoleApp\obj\Debug\net5.0\LibraryConsoleApp.genruntimeconfig.cache
+C:\Users\bimasakti\RiderProjects\LibraryConsoleApp\LibraryConsoleApp\bin\Debug\net5.0\Quartz.dll

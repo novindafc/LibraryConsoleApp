@@ -775,6 +775,21 @@
           "lib/netstandard1.3/Newtonsoft.Json.dll": {}
         }
       },
+      "Quartz/3.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Data.SqlClient": "2.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "3.1.6",
+          "System.Configuration.ConfigurationManager": "4.7.0",
+          "System.Diagnostics.DiagnosticSource": "4.7.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Quartz.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Quartz.dll": {}
+        }
+      },
       "runtime.native.System/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -3231,6 +3246,22 @@
         "newtonsoft.json.10.0.1.nupkg.sha512",
         "newtonsoft.json.nuspec",
         "tools/install.ps1"
+      ]
+    },
+    "Quartz/3.1.0": {
+      "sha512": "Lp/jRVSvR2PXfifyTNjG6iKLqEy8cfv5xcwTFfCs1QvhpbHjjyzfCqVReJsAC1/ba8cNWtnarZfc2gUgvZx/Nw==",
+      "type": "package",
+      "path": "quartz/3.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net461/Quartz.dll",
+        "lib/net461/Quartz.xml",
+        "lib/netstandard2.0/Quartz.dll",
+        "lib/netstandard2.0/Quartz.xml",
+        "quartz-logo-small.png",
+        "quartz.3.1.0.nupkg.sha512",
+        "quartz.nuspec"
       ]
     },
     "runtime.native.System/4.3.0": {
@@ -6847,7 +6878,8 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.13",
       "Microsoft.EntityFrameworkCore.SqlServer.Design >= 1.1.6",
       "Microsoft.EntityFrameworkCore.Tools.DotNet >= 2.0.3",
-      "MySql.EntityFrameworkCore >= 5.0.10"
+      "MySql.EntityFrameworkCore >= 5.0.10",
+      "Quartz >= 3.1.0"
     ]
   },
   "packageFolders": {
@@ -6914,6 +6946,10 @@
           "MySql.EntityFrameworkCore": {
             "target": "Package",
             "version": "[5.0.10, )"
+          },
+          "Quartz": {
+            "target": "Package",
+            "version": "[3.1.0, )"
           }
         },
         "imports": [

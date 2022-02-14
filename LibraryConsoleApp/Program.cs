@@ -56,7 +56,7 @@ namespace LibraryConsoleApp
         */
         private static void BorrowBook()
         {
-            RepositoryService<BookLog> service = new RepositoryService<BookLog>();
+            RepositoryBookLog service = new RepositoryBookLog();
             bool retry = true;
             while (retry == true)
             {
@@ -67,7 +67,7 @@ namespace LibraryConsoleApp
                 string bookId = Console.ReadLine();
                 if (int.TryParse(bookId, out int idBook))
                 {
-                    RepositoryService<Book> servicesB = new RepositoryService<Book>();
+                    RepositoryBook servicesB = new RepositoryBook();
                     Book resultBook = servicesB.SelectById(idBook);
                     if (resultBook != null)
                     {
@@ -77,7 +77,7 @@ namespace LibraryConsoleApp
                             string memberId = Console.ReadLine();
                             if (int.TryParse(memberId, out int idMember))
                             {
-                                RepositoryService<Member> servicesM = new RepositoryService<Member>();
+                                RepositoryMember servicesM = new RepositoryMember();
                                 Member resultMember = servicesM.SelectById(idMember);
                                 if (resultMember != null)
                                 {
@@ -149,7 +149,7 @@ namespace LibraryConsoleApp
          */
         private static void Book()
         {
-            RepositoryService<Book> service = new RepositoryService<Book>();
+            RepositoryBook service = new RepositoryBook();
             bool retry = true;
             while (retry == true)
             {
@@ -293,7 +293,7 @@ namespace LibraryConsoleApp
         */
         private static void BookLogs()
         {
-            RepositoryService<BookLog> service = new RepositoryService<BookLog>();
+            RepositoryBookLog service = new RepositoryBookLog();
             bool retry = true;
             while (retry == true)
             {
@@ -448,20 +448,20 @@ namespace LibraryConsoleApp
         */
         private static void Member()
         {
-            RepositoryService<Member> service = new RepositoryService<Member>();
+            RepositoryMember service = new RepositoryMember();
             bool retry = true;
             while (retry == true)
             {
                 Console.WriteLine("-----------------------------Virtual Library----------------------------");
                 Console.WriteLine("-------------------------------Member Data------------------------------");
-                Console.WriteLine("Id \t Name \t Gender \t Phone \t Occupation ");
+                Console.WriteLine("Id \t Name \t Gender \t Phone \t Occupation \t Email");
                 Console.WriteLine("________________________________________________________________________");
                 List<Member> members = service.SelectAll();
                 foreach (Member member in members)
                 {
                     if (member.Id != null)
                     {
-                        Console.WriteLine(member.Id + "\t" + member.Name + "\t" + member.Gender + "\t" + member.Phone + "\t" + member.Occupation);
+                        Console.WriteLine(member.Id + "\t" + member.Name + "\t" + member.Gender + "\t" + member.Phone + "\t" + member.Occupation + "\t" + member.Email);
                         Console.WriteLine("_____________________________________________________________________");
                     }
                 }
@@ -480,12 +480,15 @@ namespace LibraryConsoleApp
                     string phone = Console.ReadLine();
                     Console.WriteLine("Occupation :");
                     string job = Console.ReadLine();
+                    Console.WriteLine("Email :");
+                    string email = Console.ReadLine();
                     var _member = new Member() 
                     {
                         Name = name,
                         Gender = gender,
                         Phone = phone,
-                        Occupation = job
+                        Occupation = job,
+                        Email = email
                         
                     };
                     Console.WriteLine("belum masuk ");
@@ -511,12 +514,15 @@ namespace LibraryConsoleApp
                         string phone = Console.ReadLine();
                         Console.WriteLine("Occupation :");
                         string job = Console.ReadLine();
+                        Console.WriteLine("Email :");
+                        string email = Console.ReadLine();
                         Member member = new Member(); 
                         member.Id = _id;
                         member.Name = name; 
                         member.Gender = gender;
                         member.Phone = phone;
                         member.Occupation = job;
+                        member.Email = email;
                         service.Change(member);
                         retry = RetryInput();
 
